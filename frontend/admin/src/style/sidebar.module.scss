@@ -1,0 +1,48 @@
+@import "vars.scss";
+
+.sidebar {
+	background-color: $bg-sidebar;
+	border-right: 1px solid $bg-content-diff;
+	padding: 1rem;
+}
+
+.sidebarTitle {
+	font-size: 13px;
+}
+
+.sidebarCategory {
+	padding: 0.5rem;
+}
+
+.sidebarSection {
+	margin: 0.5rem 0;
+	border-top: 1px solid $section-border-color;
+	padding: 0.4rem;
+	li {
+		margin-bottom: 0.2rem;
+	}
+}
+
+.sidebarSectionTitle {
+	font-weight: 400;
+	font-size: 19px;
+	padding-left: 0.4rem;
+	margin-bottom: 0;
+}
+
+.sidebarInner {}
+
+.sectionListItem {
+	&:not(:last-child) {
+		padding-bottom: 0.2rem;
+	}
+}
+
+.recentlyViewedItem {
+	display: grid;
+	grid-template-columns: max-content auto;
+	grid-column-gap: 0.2rem;
+	&:not(:last-child) {
+		margin-bottom: 0.2rem;
+	}
+}

@@ -1,0 +1,23 @@
+@import "vars.scss";
+
+.leaderView {
+	width: 240px;
+	padding: 0.6rem;
+	.leaderList {
+		margin-top: 1rem;
+		.leaderListItem {
+			&:not(:last-child) {
+				margin-bottom: 0.2rem;
+			}
+			.leaderListItemMenu {
+				display: grid;
+				grid-template-columns: auto min-content min-content;
+			}
+		}
+	}
+}
+
+.leadersGrid {
+	display: grid;
+  grid-template-columns: auto max-content;
+}

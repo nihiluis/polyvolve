@@ -1,0 +1,377 @@
+@import "vars.scss";
+
+.pageContent {
+}
+
+.pageTitle {
+  margin-bottom: 0.6rem;
+}
+
+.pageTitleName {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.pageTitleType {
+  display: table;
+  border-radius: $border-rounded-standard;
+  padding: 0.25rem;
+  width: 100px;
+  text-align: center;
+  color: $text-light;
+  white-space: nowrap;
+}
+
+.editButton,
+.saveButton {
+  width: 80px;
+  padding: 0.25rem;
+  display: inline-block;
+}
+
+.buttonBar {
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.saveButton {
+  margin-left: 1rem;
+}
+
+.sectionTitle {
+  font-weight: 400;
+  font-size: 19px;
+  padding-left: 0.4rem;
+  margin-bottom: 0;
+}
+
+.tabMenu {
+  display: table;
+  border-radius: $border-rounded-standard;
+}
+
+.tabContainer {
+  background-color: $bg-content;
+  padding: 0.4rem;
+}
+
+.tabMenuItem {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-top-left-radius: $border-rounded-standard;
+  border-top-right-radius: $border-rounded-standard;
+
+  &:not(:first-child) {
+    margin-left: 0.6rem;
+  }
+
+  &:global(.active) {
+    background-color: $bg-content;
+
+    a {
+      color: $link-focus;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 75%;
+      height: 1px;
+      background-color: $section-border-color;
+      margin: 5px auto 0 auto;
+    }
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.4rem;
+}
+
+.sectionButtonBar {
+  button {
+    padding: 0.2rem;
+    font-size: 11px;
+    width: 80px;
+  }
+}
+
+$left-column-width: 180px;
+$left-column-gap: 1.5rem;
+
+.section {
+  margin: 0.5rem 0;
+
+  .sectionContent {
+    margin-top: 0.4rem;
+    border-top: 1px solid $section-border-color;
+  }
+
+  h4 {
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  .sectionInformationContainer {
+    display: grid;
+    grid-template-columns: max-content max-content;
+  }
+
+  .sectionInformationItemName,
+  .sectionInformationItemValue {
+  }
+
+  .sectionInformationItemName {
+    width: $left-column-width;
+  }
+
+  .informationFormItem {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 0.2rem;
+    }
+
+    label {
+      width: $left-column-width;
+    }
+
+    > input {
+      min-height: 38px;
+    }
+
+    .informationFormSelect {
+      input {
+        border: 0;
+        box-shadow: none;
+      }
+    }
+
+    > textarea,
+    > input,
+    .informationFormSelect,
+    .selectMenu,
+    :global(.react-toggle) {
+      margin-left: $left-column-gap;
+      font-size: $form-font-size;
+    }
+
+    > textarea,
+    > input,
+    .informationFormSelect,
+    .selectMenu {
+      width: 360px;
+    }
+
+    .selectMenuItem {
+      button {
+        background-color: $bg-content-diff-gray;
+        border: 1px solid $bg-content-diff-gray;
+
+        &:hover,
+        &:global(.active) {
+          background-color: $bg-content;
+          border: 1px solid $border-standard;
+        }
+      }
+    }
+  }
+
+  .sectionInformationItemValue {
+    grid-column: 2;
+    margin-left: $left-column-gap;
+  }
+
+  .sectionButtonBar {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      flex-basis: 80px;
+      margin: 0 0rem 0 0.8rem;
+    }
+  }
+}
+
+.sectionHalf,
+.sectionTitleHalf {
+  width: 49.75%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sectionHalf {
+  &:not(:last-child) {
+    margin-right: 0.5%;
+  }
+}
+
+.sectionTitleHalf {
+  &:not(:last-child) {
+    margin-right: 0.5%;
+  }
+}
+
+.activeSelectItemContainer {
+  width: 50%;
+
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(4, auto);
+  &:hover {
+		background-color: $bg-content;
+		.activeSelectItemContainerInner {
+			border-color: $bg-content-diff;
+		}
+  }
+  padding: 1rem;
+  border-radius: $border-rounded-standard;
+
+  .activeSelectItemContainerInner {
+    padding: 0.4rem;
+		border-radius: $border-rounded-standard;
+		border: 3px solid $bg-content-diff-gray;
+
+    .selectItemPosition {
+      font-size: 10px;
+    }
+
+    &:global(.active) {
+			border-color: $link-focus;
+    }
+  }
+}
+
+.typeIcon {
+  width: 16px;
+  height: 16px;
+  margin: 0 0.2rem;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-light;
+  border-radius: 25%;
+  font-size: 11px;
+}
+
+.subsectionTwoRow {
+  grid-template-columns: 120px auto !important;
+}
+
+.subsection {
+  display: grid;
+  grid-template-columns: 120px auto 80px;
+  grid-gap: 4rem;
+  padding: 0.8rem 0.4rem;
+
+  width: 100%;
+
+  &.isEditting {
+    background-color: $bg-content-diff-gray;
+  }
+
+  &:hover {
+    background-color: $bg-content-diff-gray;
+    //cursor: pointer;
+
+    .subsubsection {
+      background-color: $bg-content-diff-gray;
+    }
+
+    .subsectionEditButton {
+      opacity: 1;
+    }
+  }
+
+  .subsectionEditButton {
+    opacity: 0;
+
+    button {
+      padding: 0.2rem;
+      font-size: 11px;
+      background-color: $bg-content;
+      border: 1px solid $border-standard;
+      color: $text-dark;
+
+      &:hover {
+        background-color: $bg-content-diff;
+      }
+    }
+  }
+
+  .subsectionTitle {
+  }
+
+  .subsectionContent {
+  }
+}
+
+.menuListItem {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 0.2rem;
+  }
+}
+
+.selectMenu {
+  input {
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+}
+
+.subsubsectionContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.subsubsection {
+  padding: 1rem;
+  border-radius: $border-rounded-standard;
+  background-color: $bg-content-diff-light;
+}
+
+.scoreCollapser {
+  a,
+  p {
+    font-size: 11px;
+    margin-bottom: 0.1rem;
+  }
+  margin-bottom: 0.4rem;
+}
+
+.subsubsectionTitle {
+  font-size: 16px;
+}
+
+.scoreGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.scoreContainer {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-gap: 1rem;
+}
+
+.selectByMenu {
+  p {
+    margin-right: 1rem;
+  }
+  .selectByMenuSelect {
+    width: 210px;
+  }
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.8rem;
+  align-items: center;
+}

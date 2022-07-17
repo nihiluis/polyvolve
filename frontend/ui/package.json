@@ -1,0 +1,44 @@
+{
+  "_from": "git+https://gitlab.com/polyvolve/ui.git",
+  "_id": "polyvolve-ui@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/polyvolve-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://gitlab.com/polyvolve/ui.git",
+    "rawSpec": "git+https://gitlab.com/polyvolve/ui.git",
+    "saveSpec": "git+https://gitlab.com/polyvolve/ui.git",
+    "fetchSpec": "https://gitlab.com/polyvolve/ui.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/",
+    "/polyvolve-ui"
+  ],
+  "_resolved": "git+https://gitlab.com/polyvolve/ui.git#fe06a66e91202efbea6a960ceff244a393619739",
+  "_spec": "git+https://gitlab.com/polyvolve/ui.git",
+  "_where": "/home/pablo/code/polyvolve/app-admin",
+  "bundleDependencies": false,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "microtip": "^0.2.2",
+    "moment": "^2.24.0",
+    "polyvolve-ui": "git+https://gitlab.com/polyvolve/ui.git",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "@types/classnames": "^2.2.7",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^11.13.7",
+    "@types/react": "^16.8.10",
+    "next": "^9.1.6"
+  },
+  "main": "src/index.js",
+  "name": "polyvolve-ui",
+  "version": "1.0.0"
+}

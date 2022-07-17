@@ -1,0 +1,8 @@
+@import "vars.scss";
+
+.plus-icon {
+	color: $long;
+	&:hover {
+		color: color($long tint(50%));
+	}
+}

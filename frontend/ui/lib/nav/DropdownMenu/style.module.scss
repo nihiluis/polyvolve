@@ -1,0 +1,35 @@
+.dropdownContainer {
+	position: relative;
+	display: inline-block;
+	&:hover {
+		.dropdownMenu {
+			display: block;
+		}
+	}
+}
+
+.dropdownTitle {
+	margin-bottom: 8px;
+	line-height: 30px;
+}
+
+.dropdownMenu {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	z-index: 2;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 4px;
+	padding: 4px 2px;
+	li {
+		padding: 4px 8px;
+		a {
+			font-size: 12px;
+			white-space: nowrap;
+		}
+	}
+	&:hover {
+		display: block
+	}
+}

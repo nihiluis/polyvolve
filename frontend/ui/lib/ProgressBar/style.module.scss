@@ -1,0 +1,9 @@
+@import "vars.scss";
+
+.lineTrail[stroke] {
+	stroke: $short;
+}
+
+.linePath[stroke] {
+	stroke: $long;
+}

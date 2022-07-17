@@ -1,0 +1,51 @@
+@import "vars.scss";
+
+.icon {
+  display: flex;
+  color: $inactive;
+  &.active {
+    color: $text-highlight;
+    cursor: pointer;
+  }
+  a {
+    // why does this somehow become 16x19 instead of 16x16? I need to investigate this
+    display: inherit;
+  }
+  .reverse {
+    border-radius: 50%;
+    padding: 0.25rem;
+    background-color: black;
+    color: white;
+  }
+}
+
+.collapser {
+	.collapser-toggler {}
+	.collapsed {
+		display: none;
+	}
+}
+
+.notification {
+	border-radius: 3px;
+	padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+	background-color: "#5b648a";
+	&:not(:last-child) {
+		// no need for this atm
+		// margin-bottom: 1.5rem;
+	}
+	.notification-icon {
+		margin-right: 0.6rem;
+	}
+	&.warning {
+		background-color: #ffe781;
+		color: $text-dark;
+	}
+	&.error {
+		background-color: #ff8071;
+		color: white;
+	}
+	&.hint {
+		background-color: #beff81;
+	}
+}

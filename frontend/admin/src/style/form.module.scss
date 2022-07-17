@@ -1,0 +1,70 @@
+@import "vars.scss";
+
+.selectUnselectContainer {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 20px;
+	margin-bottom: 0.4rem;
+
+	.selectAll,
+	.unselectAll {
+		font-size: 10px;
+	}
+
+	.unselectAll {
+		margin-left: 1rem;
+	}
+}
+
+.formRowContainer {
+	&:not(:last-child) {
+		margin-bottom: 0.8rem;
+	}
+}
+
+.plusButton {
+	width: 48px;
+	margin: 0 auto;
+}
+
+.formRow {
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}
+
+.formRowGrid {
+	display: grid;
+	grid-template-columns: 120px auto;
+	grid-gap: 4rem;
+}
+
+.formRowInputContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+
+	input,
+	textarea {
+		margin-right: 0.4rem;
+	}
+
+	textarea {
+		width: 90%;
+	}
+
+	&:global(.pv__control) {
+		width: 180px;
+	}
+}
+
+.formButtonBar {
+	display: flex;
+	justify-content: flex-end;
+
+	button {
+		&:not(:last-child) {
+			margin-right: 0.6rem;
+		}
+	}
+}

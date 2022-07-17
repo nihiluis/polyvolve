@@ -1,0 +1,11 @@
+@import "vars.scss";
+
+.dashboardContainer {
+	padding: 0.8rem;
+	border-radius: $border-rounded-standard;
+	background-color: $bg-content;
+}
+
+.pageTitle {
+	margin-bottom: 0.6rem;
+}

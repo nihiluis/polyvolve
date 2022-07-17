@@ -1,0 +1,10 @@
+@import "vars.scss";
+
+.logo-text {
+    letter-spacing: 1px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: left;
+    color: $text-light;
+}

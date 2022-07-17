@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import "./reset.scss";
+@import "./vars.scss";
+@import "./button.scss";
+
+*, input, select, textarea, option, button {
+	outline: none!important;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  //background-color: $bg-body;
+  color: $text-standard;
+  font-family: $font-family;
+}
+
+h1 {
+  color: #1f3f4b;
+  font-size: 2rem;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+h2,
+h3,
+h4 {
+  color: #376475;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  &.title {
+    text-align: center;
+    letter-spacing: 0.4px;
+  }
+
+  @include color-transition(200ms);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  color: $link;
+  cursor: pointer;
+
+  &:hover {
+    color: $link-focus;
+  }
+
+  @include color-transition(200ms);
+}
+
+strong {
+  font-weight: 700;
+}
+
+.pageContent {
+  background-color: $bg-content-diff;
+}
+
+.pageContentWhite {
+  background-color: $bg-content;
+}
+
+.inputGroup {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+
+  .inputItem {
+    display: table-cell;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .inputItemButton {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    display: table-cell;
+  }
+
+  .btn {
+    border-bottom-right-radius: 1.1875rem;
+    border-top-right-radius: 1.1875rem;
+  }
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input,
+.select {
+  border: 1px solid $border-standard;
+  border-radius: 4px;
+  padding: 1px 8px;
+  color: $text-dark;
+  font-family: $font-family;
+
+  &:focus {
+    border-color: rgb(55, 116, 177);
+    outline-color: currentcolor;
+    box-shadow: rgba(48, 96, 143, 0.25) 0px 0px 0px 0.2rem;
+  }
+}
+
+textarea,
+input,
+.selectMenu {
+  font-size: $form-font-size;
+}
+
+select {
+  background-color: $bg-content;
+}
+
+textarea {
+  border: 1px solid $border-standard;
+  border-radius: 4px;
+  padding: 8px;
+  color: $text-dark;
+  font-family: $font-family;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+
+  &:focus {
+    border-color: rgb(55, 116, 177);
+    outline-color: currentcolor;
+    box-shadow: rgba(48, 96, 143, 0.25) 0px 0px 0px 0.2rem;
+  }
+}
+
+.lightBox {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem;
+  border-radius: 4px;
+  margin: 0.6rem 0;
+
+  h4 {
+    text-align: center;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $bg-content-diff;
+      margin: 10px auto;
+    }
+  }
+}
+
+.page {
+  background-color: $bg-content-diff;
+}
+
+.title {
+  color: $logo;
+}
+
+.long {
+  color: $long;
+}
+
+.short {
+  color: $short;
+}
+
+.warn {
+  color: $neutral;
+}
+
+.updated {
+  color: $active;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.grouped {
+  display: flex;
+
+  div:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.linksMenu {
+  background-color: #3a3f47;
+  padding: 4px;
+  border-radius: 4px;
+  display: table;
+  margin: 4px auto;
+
+  a {
+    padding: 4px 12px;
+    outline: 0;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+}
+
+p.infoText {
+  font-size: 1.1rem;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.mb06 {
+  margin-bottom: 0.6rem;
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}
+
+.mt06 {
+  margin-top: 0.6rem;
+}
+
+.mt1 {
+  margin-top: 1rem;
+}
+
+.widthInputSmall {
+  width: 120px;
+}
+
+.btnAlternative {
+  background-color: $btn-alternative !important;
+
+  &:hover:enabled {
+    background-color: $btn-alternative-hover !important;
+  }
+}

@@ -1,0 +1,84 @@
+@import "vars.scss";
+
+.authForm {
+  margin-bottom: 40px;
+  background-color: $bg-content;
+  padding: 1rem;
+  border-radius: $border-rounded-standard;
+
+  input {
+    width: 100%;
+    margin: 0.6rem 0;
+  }
+  :global {
+    .btn {
+      margin-top: 10px;
+    }
+    .error {
+      margin-top: -5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.authTitle {
+  margin-top: 0.4rem;
+}
+
+.authSubtitle {
+  text-align: center;
+}
+
+.auth {
+  padding-top: 10px;
+  h1 {
+    text-align: center;
+  }
+  .error {
+    margin-bottom: 10px;
+  }
+  .logo {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  p,
+  label,
+  input {
+    color: $text-dark;
+  }
+}
+
+.authWindow {
+  max-width: 250px;
+  margin: 8px auto;
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.authWindowForm {
+  padding: 15px;
+  border-radius: 6px;
+  background-color: $bg-content;
+  border: 1px solid $border-standard;
+}
+
+.registeredMsg {
+  margin-bottom: 8px;
+}
+
+.loadingScreen {
+  height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  .loadingScreenLogo {
+    justify-content: center;
+  }
+}

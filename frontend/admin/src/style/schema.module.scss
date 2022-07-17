@@ -1,0 +1,70 @@
+@import "vars.scss";
+
+.schemaAdd {
+	background-color: $bg-content;
+	padding: 1rem;
+	border-radius: $border-rounded-standard;
+}
+
+.schemaAddCategory {
+	margin: 1rem 0rem;
+	padding: 1rem;
+	background-color: $bg-content;
+	border-radius: 4px;
+}
+
+.category {
+	margin: 1rem 0rem;
+	padding: 1rem;
+	background-color: $bg-content;
+	border-radius: 4px;
+}
+
+.criteriaSubsection {
+	.criterionIconBar {
+		opacity: 0;
+	}
+
+	&:hover {
+		.criterionIconBar {
+			opacity: 1;
+		}
+	}
+}
+
+.addCriterionButton {
+	width: 24px;
+	height: 24px;
+	padding: 0;
+}
+
+.criterion {
+	display: grid;
+	grid-template-columns: auto max-content 80px;
+	align-items: center;
+	grid-gap: 4rem 1rem;
+}
+
+.categoryTitleBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.loadContainer {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.selectSchema {
+}
+
+.schemaSelectBar {
+	display: grid;
+	grid-template-columns: auto min-content;
+	grid-gap: 0.5rem;
+	grid-template-rows: 40px;
+}

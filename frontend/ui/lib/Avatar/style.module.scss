@@ -1,0 +1,21 @@
+@import "vars.scss";
+
+.avatar {
+	border-radius: 100%;
+	display: table;
+}
+
+.miniAvatar {
+	border-radius: 100%;
+	background-color: $bg-diff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.avatarImage {
+	border-radius: 100%;
+	//border: #fff solid 2px;
+}

@@ -1,0 +1,21 @@
+@import "vars.scss";
+#footer {
+	ul>li {
+		display: inline-block;
+		padding: 0 10px;
+		a {
+			font-size: 12px;
+		}
+	}
+	.donate {
+		h3 {
+			font-size: 14px;
+		}
+		a,
+		p {
+			font-size: 12px;
+		}
+		margin-bottom: 8px;
+		text-align: center;
+	}
+}

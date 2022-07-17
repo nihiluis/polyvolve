@@ -1,0 +1,91 @@
+@import "vars.scss";
+
+.modalOverlay {
+  background-color: #0003;
+}
+
+.modal {
+  margin: 0 auto;
+  margin-top: 5%;
+
+  .modalInner {
+    padding: 2rem;
+  }
+}
+
+.modalForm {
+  background-color: $bg-content;
+  border-radius: $border-rounded-standard;
+
+  .modalFormRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+
+		label {
+			margin-right: 1rem;
+		}
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    &:global(.pv__control) {
+      width: 180px;
+    }
+    textarea {
+      width: 240px;
+      max-height: 160px;
+      font-size: 11px;
+      resize: vertical;
+    }
+  }
+
+  .modalFormInputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 0.4rem;
+  }
+
+  .modalFormInput {
+    width: 180px;
+    min-height: 34px;
+  }
+
+  .modalFormRowContainer {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.modalSelectButtonMenu {
+  z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  .modalSelectButtonMenuItem {
+    z-index: 100;
+    margin: 0.25rem;
+
+    button {
+      color: $text-dark;
+      padding: 0.5rem;
+      border-radius: 4px;
+      background-color: white;
+
+      &:hover {
+        color: $text-light;
+      }
+
+      &:global(.active) {
+        color: $text-light;
+        background-color: $btn-hover;
+      }
+    }
+  }
+}

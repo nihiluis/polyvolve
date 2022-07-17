@@ -1,0 +1,12 @@
+@import "vars.scss";
+
+.go-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 6px;
+	color: $inactive;
+	&.active {
+		color: $text-highlight;
+		cursor: pointer;
+	}
+}

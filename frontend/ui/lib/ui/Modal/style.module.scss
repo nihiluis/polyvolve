@@ -1,0 +1,45 @@
+.toggleObject {
+	position: absolute;
+	z-index: 1;
+}
+
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	&.center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.modalContent {
+	/*
+	overflow: auto;
+	border-radius: 4px;*/
+	outline: medium none;
+	-webkit-box-shadow: -1px 0px 40px -20px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: -1px 0px 40px -20px rgba(0, 0, 0, 0.8);
+	box-shadow: -1px 0px 40px -20px rgba(0, 0, 0, 0.8);
+
+	&.positioned {
+		position: absolute;
+	}
+
+	&.unpositioned {
+		display: table;
+	}
+}
+
+.modalOpen {
+	overflow: hidden;
+	height: 100%;
+}
+
+.modalPortal {
+	z-index: inherit;
+}

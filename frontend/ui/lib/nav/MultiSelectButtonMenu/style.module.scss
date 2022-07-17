@@ -1,0 +1,28 @@
+@import "vars.scss";
+.choice-box {
+	display: flex;
+	.choice-box-item {
+		flex: 1;
+		button {
+			font-weight: 700;
+			border: none;
+			width: 100%;
+			cursor: pointer;
+			font-family: $font-family;
+			padding: 4px;
+			background-color: $bg-content-diff;
+			color: $text-light;
+			@include all-transition(200ms);
+			outline: 0;
+			&.active {
+				background-color: $bg-content;
+			}
+			&:focus {
+				outline: none;
+			}
+			&::-moz-focus-inner {
+				border: 0;
+			}
+		}
+	}
+}

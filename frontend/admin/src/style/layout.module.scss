@@ -1,0 +1,101 @@
+@import "vars.scss";
+
+#layout {
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: min-content auto min-content;
+}
+
+.fullSidebar {
+  grid-template-areas:
+    "userHeader header header"
+    "sidebarLeft content sidebarRight"
+    "footer footer footer";
+}
+
+.leftSidebar {
+  .contentGrid {
+    padding-left: 180px;
+  }
+}
+
+.rightSidebar {
+  .contentGrid {
+    padding-right: 180px;
+  }
+}
+
+.noSidebar {
+  grid-template-areas:
+    "userHeader header header"
+    "content content content"
+    "footer footer footer";
+}
+
+.userHeaderGrid {
+  grid-area: userHeader;
+}
+
+.headerGrid {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 38px;
+  z-index: 1000;
+}
+
+.sidebarLeftGrid {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 38px;
+  width: 180px;
+}
+
+.sidebarRightGrid {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: 38px;
+  width: 180px;
+}
+
+.sidebarGridDisabled {
+  display: none;
+}
+
+.contentGrid {
+  grid-area: content;
+  min-height: 500px;
+  padding-top: 38px;
+  display: grid;
+}
+
+.contentRightSidebar {
+  padding-right: 180px;
+}
+
+.contentLeftSidebar {
+  padding-left: 180px;
+}
+
+.content {
+  background-color: $bg-content-diff;
+  height: 100%;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.footerGrid {
+  grid-area: footer;
+}
+
+.logoHeader {
+  display: grid;
+	grid-template-columns: min-content auto;
+	background-color: $bg-content;
+  grid-gap: 1rem;
+  align-items: center;
+  padding-left: 1rem;
+  height: 38px;
+  width: 200px;
+  border-bottom: 1px solid $bg-content-diff;
+}

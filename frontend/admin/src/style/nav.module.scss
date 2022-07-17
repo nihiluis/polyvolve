@@ -1,0 +1,71 @@
+@import "vars.scss";
+
+.userHeader {
+	background-color: $bg-content;
+	display: flex;
+	align-items: center;
+	margin-left: 1rem;
+	justify-content: center;
+}
+
+.navContainer {
+	display: flex;
+	position: relative;
+	align-items: center;
+	transition: all 0.2s ease 0s;
+	border-bottom: 1px solid $bg-content-diff;
+	height: 38px;
+	flex-grow: 1;
+	background-color: $bg-content;
+	
+	.navRight {
+		position: absolute;
+		right: 1%;
+		top: 50%;
+		transform: translateY(-50%);
+
+		display: flex;
+
+		.navRightList {
+			display: flex;
+			align-items: center;
+
+			li {
+				padding: 0 8px;
+			}
+		}
+	}
+
+	.navCenter {
+		.navCenterList {
+			display: flex;
+			li {
+				padding: 0.4rem 1.2rem;
+				a {
+					display: flex;
+				}
+			}
+		}
+	}
+
+	ul>li>.active {
+		color: $logo;
+
+		&::after {
+			display: table;
+			clear: both;
+			content: "";
+		}
+	}
+
+	svg {
+		vertical-align: middle;
+	}
+
+
+}
+
+.searchInput {
+	// do better later
+	padding: 0.2rem !important;
+}

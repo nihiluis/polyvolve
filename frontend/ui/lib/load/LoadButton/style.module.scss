@@ -1,0 +1,10 @@
+.btn-load {
+	&::before {
+		content: ".";
+		opacity: 0;
+		display: block;
+	}
+	.load {
+		position: absolute;
+	}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+        body {
+            font-family: 'Nunito',
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                "Roboto",
+                "Oxygen",
+                "Ubuntu",
+                "Cantarell",
+                "Fira Sans",
+                "Droid Sans",
+                "Helvetica Neue",
+                sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+<div style="display: flex; align-items: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+         xml:space="preserve" style="width: 24px; height: 24px; display: inline-block;">
+        <circle cx="256.4" cy="62.5" r="45.2"></circle>
+            <g>
+            <path d="M334.5,424.1c-111.2,0-222.5,0-333.7,0l222.9-287.9l28.6,33.1L84.6,383c83.3,0,166.6,0,249.9,0
+                C334.5,396.7,334.5,410.4,334.5,424.1z"></path>
+        </g>
+            <g>
+            <path d="M178.3,494c111.2,0,222.5,0,333.7,0L289.1,206.1c-9.5,9.7-19.1,19.3-28.6,29
+                c55.9,72.6,111.8,145.2,167.7,217.8c-83.3,0-166.6,0-249.9,0C178.3,466.6,178.3,480.3,178.3,494z"></path>
+        </g>
+    </svg>
+    <h1 style="margin: 0; display: inline-block; margin-left: 0.5rem; font-size: 13px; color: #283747;">Polyvolve</h1>
+</div>
+<div style="width: 600px; margin-left: 2rem; margin-top: 1.5rem;">
+    <p th:text="'Hello ' + ${userName} + ','"></p>
+    <h2 style="margin: 0; margin-bottom: 0.2rem; font-size: 12px; color: #646b75;"
+        th:text="${adminName} + ' has requested you to complete your performance review for'"></h2>
+    <p></p>
+    <a style="text-decoration: none; outline: 0;" th:href="${reviewLink}"><h1
+            th:text="${reviewMasterName}"></h1></a>
+    <p></p>
+    <h2 style="margin: 0; margin-bottom: 0.2rem; font-size: 12px; color: #646b75;" th:text="'until ' + ${dueDate}"></h2>
+    <p>Thank you.</p>
+    <p>Sent by Polyvolve.</p>
+</div>
+</body>
+
+</html>

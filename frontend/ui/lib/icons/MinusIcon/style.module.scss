@@ -1,0 +1,8 @@
+@import "vars.scss";
+
+.minus-icon {
+	color: $short;
+	&:hover {
+		color: color($short tint(50%));
+	}
+}

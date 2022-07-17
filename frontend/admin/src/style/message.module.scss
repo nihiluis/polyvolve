@@ -1,0 +1,37 @@
+@import "vars.scss";
+
+.notificationMessageContainer {
+	position: fixed;
+	z-index: 1;
+	top: 48px;
+	right: 242px;
+}
+
+.notificationMessage {
+	position: relative;
+	background-color: $bg-dark;
+	padding: 0.8rem;
+	max-width: 180px;
+	color: $text-light;
+	border-radius: 4px;
+	transition: all 0.5s ease-out;
+	box-shadow: -1px 0px 40px -20px rgba(0, 0, 0, 0.8);
+
+	&:not(:last-child) {
+		margin-bottom: 0.8rem;
+	}
+
+	p {
+		font-size: 11px;
+	}
+
+	&.warn {
+		background-color: #b69f38;
+	}
+
+	&.error {
+		background-color: $error;
+	}
+
+	.info {}
+}
