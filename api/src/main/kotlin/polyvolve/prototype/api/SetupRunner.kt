@@ -27,9 +27,10 @@ class SetupRunner(val adminRepository: AdminRepository,
         val count = adminRepository.count()
         if (count == 0L) {
             val randomPassword = "test"
-            val adminId = adminService.createDummyAccount("info@nihiluis.com", randomPassword, "Don", "Pablo")
+            val mail = "info@info.com"
+            val adminId = adminService.createDummyAccount(mail, randomPassword, "Bartolomaeus", "Rolf")
 
-            logger.info("First startup: created Admin $adminId with mail info@nihiluis.com with password $randomPassword." +
+            logger.info("First startup: created Admin $adminId with mail $mail with password $randomPassword." +
                     " Make sure to delete the account/change the password.")
         }
     }

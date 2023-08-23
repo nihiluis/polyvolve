@@ -27,16 +27,25 @@ class InviteController(val inviteService: InviteService) {
     }
 
     @PostMapping("/accept", consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun acceptInvite(body: AcceptInviteForm, bindingResult: BindingResult, validator: SpringValidatorAdapter): OkResponseEntity {
+    fun acceptInvite(
+        body: AcceptInviteForm,
+        bindingResult: BindingResult,
+        validator: SpringValidatorAdapter
+    ): OkResponseEntity {
         validator.validateAndThrow(body, bindingResult)
 
-        val inviteUuid = inviteService.acceptInvite(body.inviteId!!, body.mail!!, body.password!!, body.name!!, body.surname!!)
+        val inviteUuid =
+            inviteService.acceptInvite(body.inviteId!!, body.mail!!, body.password!!, body.name!!, body.surname!!)
 
         return defaultOkResponse(inviteUuid)
     }
 
     @PostMapping("/create", consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun createInvite(body: CreateInviteForm, bindingResult: BindingResult, validator: SpringValidatorAdapter): OkResponseEntity {
+    fun createInvite(
+        body: CreateInviteForm,
+        bindingResult: BindingResult,
+        validator: SpringValidatorAdapter
+    ): OkResponseEntity {
         validator.validateAndThrow(body, bindingResult)
 
         val inviteUuid = inviteService.createInvite(body.mail!!)
@@ -45,7 +54,11 @@ class InviteController(val inviteService: InviteService) {
     }
 
     @PostMapping("/remove", consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun removeInvite(body: RemoveInviteForm, bindingResult: BindingResult, validator: SpringValidatorAdapter): OkResponseEntity {
+    fun removeInvite(
+        body: RemoveInviteForm,
+        bindingResult: BindingResult,
+        validator: SpringValidatorAdapter
+    ): OkResponseEntity {
         validator.validateAndThrow(body, bindingResult)
 
         inviteService.removeInvite(body.mail!!)

@@ -29,17 +29,20 @@ class JWTAuthenticationFilter(authenticationManager: AuthenticationManager) : Us
     }
 
     @Throws(AuthenticationException::class)
-    override fun attemptAuthentication(req: HttpServletRequest,
-                                       res: HttpServletResponse?): Authentication {
+    override fun attemptAuthentication(
+        req: HttpServletRequest,
+        res: HttpServletResponse?
+    ): Authentication {
         try {
             val credentials = ObjectMapper()
-                    .readValue(req.inputStream, AuthController.LoginForm::class.java)
+                .readValue(req.inputStream, AuthController.LoginForm::class.java)
 
             return authenticationManager.authenticate(
-                    UsernamePasswordAuthenticationToken(
-                            credentials.mail,
-                            credentials.password,
-                            ArrayList<GrantedAuthority>())
+                UsernamePasswordAuthenticationToken(
+                    credentials.mail,
+                    credentials.password,
+                    ArrayList<GrantedAuthority>()
+                )
             )
         } catch (e: IOException) {
             throw RuntimeException(e)
@@ -48,14 +51,16 @@ class JWTAuthenticationFilter(authenticationManager: AuthenticationManager) : Us
     }
 
     @Throws(IOException::class, ServletException::class)
-    override fun successfulAuthentication(req: HttpServletRequest,
-                                                    res: HttpServletResponse,
-                                                    chain: FilterChain,
-                                                    auth: Authentication) {
+    override fun successfulAuthentication(
+        req: HttpServletRequest,
+        res: HttpServletResponse,
+        chain: FilterChain,
+        auth: Authentication
+    ) {
         val token = JWT.create()
-                .withSubject((auth.principal as User).username)
-                .withExpiresAt(Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .sign(HMAC512(SECRET.toByteArray()))
+            .withSubject((auth.principal as User).username)
+            .withExpiresAt(Date(System.currentTimeMillis() + EXPIRATION_TIME))
+            .sign(HMAC512(SECRET.toByteArray()))
         res.addHeader(HEADER_STRING, TOKEN_PREFIX + token)
     }
 }

@@ -2,7 +2,7 @@ import * as React from "react"
 import { connect } from "react-redux"
 import { RootState } from "../../../redux"
 import { RecentlyViewedItem } from "../../../redux/recentlyviewed"
-import { SidebarSection } from "."
+import SidebarSection from "./SidebarSection"
 import SidebarSectionTitle from "./SidebarSectionTitle"
 import { NavigationItem } from "../../utils"
 import {

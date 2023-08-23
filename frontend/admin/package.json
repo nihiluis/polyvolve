@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "next -- -p 3000",
+    "start:dev": "NODE_OPTIONS=--openssl-legacy-provider next -- -p 3000",
     "start:prod": "NODE_ENV=production next -- -p 3000",
     "build:dev": "next build",
     "build": "NODE_ENV=production next build",

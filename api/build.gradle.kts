@@ -17,11 +17,12 @@ plugins {
     id("org.springframework.boot") version "2.1.3.RELEASE"
     id("org.jetbrains.kotlin.plugin.spring") version "1.3.72"
     id("io.spring.dependency-management") version "1.0.6.RELEASE"
+    id("org.sonarqube") version "4.2.1.3168"
 }
 
 group = "polyvolve.prototype"
 version = "0.0.1-SNAPSHOT"
-""
+
 application {
     mainClassName = "polyvolve.prototype.api.PrototypeApplicationKt"
 }

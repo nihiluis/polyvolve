@@ -9,7 +9,7 @@ export const SITE_TITLE = "Polyvolve Admin"
 export const SITE_DESCRIPTION = ""
 export const SITE_IMAGE = ""
 
-export const API_URL = "https://polyvolve-api.herokuapp.com"
+export const API_URL = "http://localhost:8080"
 
 export const REVIEW_URL = "http://localhost:3333"
 

@@ -28,8 +28,8 @@ class ServerConfig : WebServerFactoryCustomizer<ConfigurableWebServerFactory> {
             dataSource.url = herokuDatabaseUrl
         } else {
             dataSource.url = "jdbc:postgresql://localhost:5432/polyvolve?ssl=false"
-            dataSource.username = "poly"
-            dataSource.password = "vITM9ZxUaaMfI7hmJ6Ki"
+            // dataSource.username = "poly"
+            // dataSource.password = "vITM9ZxUaaMfI7hmJ6Ki"
         }
 
         logger.info("Connecting to database_url ${dataSource.url}")

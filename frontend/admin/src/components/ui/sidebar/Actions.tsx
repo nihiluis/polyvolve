@@ -1,13 +1,11 @@
 import * as React from "react"
-import { SidebarSection } from ".";
-import SidebarSectionTitle from "./SidebarSectionTitle";
+import SidebarSection from "./SidebarSection"
+import SidebarSectionTitle from "./SidebarSectionTitle"
 
 const Actions: React.FC = props => (
   <React.Fragment>
     <SidebarSectionTitle title="Actions" />
-    <SidebarSection>
-      {props.children}
-    </SidebarSection>
+    <SidebarSection>{props.children}</SidebarSection>
   </React.Fragment>
 )
 
